@@ -24,9 +24,9 @@ BEGIN TRANSACTION;CREATE TABLE equipment (
     priority INTEGER DEFAULT 0,
     FOREIGN KEY (equipment_id) REFERENCES equipment(id),
     FOREIGN KEY (user_email) REFERENCES users(email)
-);DELETE FROM "sqlite_sequence";INSERT INTO "sqlite_sequence" VALUES('equipment',15);INSERT INTO "sqlite_sequence" VALUES('users',7);INSERT INTO "sqlite_sequence" VALUES('login_logs',124);INSERT INTO "sqlite_sequence" VALUES('reservations',3);INSERT INTO "sqlite_sequence" VALUES('payment_logs',3);CREATE TABLE users (
+);DELETE FROM "sqlite_sequence";INSERT INTO "sqlite_sequence" VALUES('equipment',15);INSERT INTO "sqlite_sequence" VALUES('users',8);INSERT INTO "sqlite_sequence" VALUES('login_logs',124);INSERT INTO "sqlite_sequence" VALUES('reservations',3);INSERT INTO "sqlite_sequence" VALUES('payment_logs',3);CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
     role TEXT NOT NULL
-, subscription_status BOOLEAN DEFAULT FALSE);INSERT INTO "users" VALUES(2,'123','$2b$12$OmE88XNK6lRq9PH/9QWhB.wTLWhehei5QXBAjFMooCFPv457UXtAG','teacher',0);INSERT INTO "users" VALUES(3,'111','$2b$12$P40trK18Uq552fFxxos2ruDuY0M6OkeaevuvgmiKPSRi0y3Vvxzgq','teacher',0);INSERT INTO "users" VALUES(6,'student1','$2b$12$lahGvbrv4rd.qPUUsyaba.EcAvy0TK4V2sKNVXUe3ohlXUGB30UcS','student',1);INSERT INTO "users" VALUES(7,'10','$2b$12$x0UevS983iNwILL4d8INeeD90FMQ/oQr2zi6qHZexM0xb8lWgEw/G','student',0);COMMIT;
+, subscription_status BOOLEAN DEFAULT FALSE);INSERT INTO "users" VALUES(2,'123','$2b$12$OmE88XNK6lRq9PH/9QWhB.wTLWhehei5QXBAjFMooCFPv457UXtAG','teacher',0);INSERT INTO "users" VALUES(3,'111','$2b$12$P40trK18Uq552fFxxos2ruDuY0M6OkeaevuvgmiKPSRi0y3Vvxzgq','teacher',0);INSERT INTO "users" VALUES(6,'student1','$2b$12$lahGvbrv4rd.qPUUsyaba.EcAvy0TK4V2sKNVXUe3ohlXUGB30UcS','student',1);INSERT INTO "users" VALUES(7,'10','$2b$12$x0UevS983iNwILL4d8INeeD90FMQ/oQr2zi6qHZexM0xb8lWgEw/G','student',0);INSERT INTO "users" VALUES(8,'gdg','$2b$12$MihVquupRGWJ4wejWXEpn.9pyzI1dZux6trcJfZ.fWogFUCb3fBZ6','student',0);COMMIT;
